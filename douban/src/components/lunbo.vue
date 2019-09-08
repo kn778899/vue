@@ -1,28 +1,29 @@
 <template>
     <div>
-        <div class="com">
-            <img :src="img" alt="">
-            <br>
-            <span>{{text1}}</span>
-            <div class="xx">
-                <el-rate 
-                    v-model="value"
-                    disabled 
-                    show-score:true
-                    text-color="#ff9900" 
-                    show-text:flase
-                >
-                </el-rate>
-                <span>{{texts}}</span>
+        <router-link :to= "{name:'dyxq',params:{id:zid}}">
+            <div class="com">
+                <img :src="img">
+                <br>
+                <span>{{text1}}</span>
+                <div class="xx">
+                    <el-rate 
+                        v-model="value"
+                        disabled 
+                        show-score:true
+                        text-color="#ff9900" 
+                        show-text:flase
+                    >
+                    </el-rate>
+                    <span>{{texts}}</span>
+                </div>
             </div>
-           
-        </div>
+        </router-link>
     </div>
 </template>
 
 <script>
 export default {
-    props:['text1','img','txt1'],
+    props:['text1','img','txt1','zid'],
     data() {
       return {
         value: this.txt1/2,
@@ -64,6 +65,10 @@ export default {
         display: flex;
         font-size: 0;
     }
+    a:-webkit-any-link {
+    text-decoration: none;
+    color: black
+} 
 </style>
 <style>
     .el-rate__icon {

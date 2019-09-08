@@ -4,7 +4,7 @@
         <daohang></daohang>
         <img src="../../static/gt.gif" v-if='arr.length<=0'>
     <div v-else>
-        <item v-for="(v,i) in arr" :key='i' :text1='v.title' :text2='v.tags' :text3='v.category_name' :img='v.image_lmobile' :tId='v.uid'></item>
+        <item v-for="(v,i) in arr" :key='i' :text1='v.title' :text2='v.tags' :text3='v.category_name' :img='v.image_lmobile' :tId='v.id'></item>
     </div>
     </div>
 </template>
@@ -21,11 +21,11 @@ export default {
     },
     data(){
         return{
-            arr:[]
+            arr:[],
+            
         }
     },
     created() {
-       
         setTimeout(()=>{
                 this.axios({
                 url:'/a',
@@ -33,7 +33,7 @@ export default {
             }).then((ok)=>{
                 this.arr=ok.data.shouye
             })
-        },3000)
+        },1000)
     }
 }
 </script>

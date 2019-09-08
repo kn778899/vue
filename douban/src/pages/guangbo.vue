@@ -1,6 +1,7 @@
 <template>
     <div>
         <sydh></sydh>
+        <span>打开APP,浏览更多</span>
         <dk></dk>
         <deng v-if='sty'></deng>
 
@@ -58,5 +59,13 @@ export default {
         font-size: .16rem;
         text-align: center;
         margin-top: .2rem;
+    }
+    span{
+        display: block;
+        font-size: .14rem;
+        color: #2ca532;
+        float: left;
+        line-height: .8rem;
+        margin-left: .38rem;
     }
 </style>

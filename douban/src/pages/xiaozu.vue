@@ -4,7 +4,7 @@
         <deng v-if='sty'></deng>
         <div>
             <h4>成都租房</h4>
-            <xz  v-for='(v,i) in arra' :key='i' :img='v.images.small' :txt1='v.title' :txt2='v.group_member' :txt3='v.group_topic.time' :txt4='v.group_topic.title'></xz>
+            <xz v-for='(v,i) in arra' :key='i' :img='v.images.small' :txt1='v.title' :txt2='v.group_member' :txt3='v.group_topic.time' :txt4='v.group_topic.title'></xz>
             <p>更多相关小组</p>
         </div>
 
@@ -48,30 +48,33 @@ export default {
             url:'/a',
             method:'get'
         }).then((ok)=>{
+          
             this.arra=ok.data.xiaozua;
             this.arrb=ok.data.xiaozub;
             this.arrc=ok.data.xiaozuc;
+            console.log( this.arra);
         })
-    },
-    created() {
-        var token= window.localStorage.getItem('token',token);
-            if(token){
-                this.axios({
-                url:'http://localhost:9000/tok',
-                method:'get',
-                params:{
-                    token:token
-                }
-            }).then((ok)=>{
-                console.log(ok.data)
-                if(ok.data.ook==true){
-                    this.sty=''
-                }else{
-                    this.$router.push('/zhuce')
-                }
-            })
-        }
-    },
+    }
+    // ,
+    // created() {
+    //     var token= window.localStorage.getItem('token',token);
+    //         if(token){
+    //             this.axios({
+    //             url:'http://localhost:9000/tok',
+    //             method:'get',
+    //             params:{
+    //                 token:token
+    //             }
+    //         }).then((ok)=>{
+    //             console.log(ok.data)
+    //             if(ok.data.ook==true){
+    //                 this.sty=''
+    //             }else{
+    //                 this.$router.push('/zhuce')
+    //             }
+    //         })
+    //     }
+    // },
 }
 </script>
 

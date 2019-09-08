@@ -2,8 +2,8 @@
     <div>
         <div class="com">
             <router-link to='/' tag='li'>{{text4}}<span>更多</span></router-link>
-            <div class="com1">
-                <lb  v-for='(v,i) in text2' :key='i' :text1='v.title' :img='v.images.small' :txt1='v.rating.average'></lb>
+            <div class="com1" >
+                <lb v-for='(v,i) in text2' :key='i' :text1='v.title' :img='v.images.small' :zid='v.casts[0].id' :txt1='v.rating.average'></lb>
             </div>
         </div>
     </div>
@@ -15,7 +15,18 @@ export default {
     components:{
         lb
     },
-    props:['text2','text4']
+    data(){
+        return{
+            tex:''
+        }
+    },
+    props:['text2','text4'],
+   methods: {
+       func(val){
+           this.tex=val;
+           console.log(this.tex)
+       }
+   },
     
 }
 </script>

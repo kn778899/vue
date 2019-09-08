@@ -34,7 +34,8 @@ export default {
         return{
             arr:[],
             arr1:[],
-            dataa:['影院热映','免费在线电影','新品速递']
+            dataa:['影院热映','免费在线电影','新品速递'],
+            id:''
         }
     },
     created() {

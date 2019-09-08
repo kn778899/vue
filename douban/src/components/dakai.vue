@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="com">
-            <span>打开APP,浏览更多</span>
+            
             <div class="btn">
                 <button>极速下载</button>
                 <button>打开</button>
@@ -24,14 +24,9 @@ export default {
         background-size: 100% .8rem;
         font-size: 0;
     }
-    span{
-        display: block;
-        font-size: .14rem;
-        color: #2ca532;
-        float: left;
-        line-height: .8rem;
-        margin-left: .38rem;
-    }
+  .btn{
+      margin-left: 1.6rem;
+  }
     button{
         height: .28rem;
         border: 1px solid #42bd56;

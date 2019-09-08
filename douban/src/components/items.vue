@@ -1,7 +1,7 @@
 
 <template>
     <div class="com_main">
-        <router-link to= "{name:'xiangqing',params:{id:'tId'}}">
+        <router-link :to= "{name:'syxq',params:{id:tId}}">
             <div class="com_a">
                 <div class="com_txt">
                     <h4>{{text1}}</h4>
@@ -9,7 +9,7 @@
                     <h5>{{text3}}</h5>
                 </div>
                 <div class="img">
-                    <img :src="img" alt="">
+                    <img :src="img">
                 </div>
             </div>
         </router-link>

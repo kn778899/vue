@@ -9,6 +9,7 @@ import xiaozu from '../pages/xiaozu'
 import guangbo from '../pages/guangbo'
 import liebiao from '../pages/liebiao'
 import syxq from '../pages/syxq'
+import dyxq from '../pages/dyxq'
 Vue.use(Router)
 
 
@@ -39,7 +40,6 @@ export default new Router({
       //   if(token){
       //     next()
       //   }else{
-      //     alert('gtrhdxhbfchn')
       //     next('/denglu')
       //   }
       // }
@@ -53,7 +53,6 @@ export default new Router({
       //   if(token){
       //     next()
       //   }else{
-      //     alert('gtrhdxhbfchn')
       //     next('/denglu')
       //   }
       // }
@@ -77,6 +76,11 @@ export default new Router({
       path:'/syxq',
       name:'syxq',
       component:syxq 
+    },
+    {
+      path:'/dyxq',
+      name:'dyxq',
+      component:dyxq
     },
     {
       path:"/*",
